@@ -31,3 +31,5 @@ WORKDIR /var/www
 COPY docker/php/custom.ini /usr/local/etc/php/conf.d/custom.ini
 
 USER $user
+
+CMD ["php-fpm"]
