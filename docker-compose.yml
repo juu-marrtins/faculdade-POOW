@@ -10,7 +10,9 @@ services:
         depends_on:
             - redis
         networks:
-            - laravel
+            laravel:
+                aliases:
+                    - php-fpm   # Alias para Nginx usar
 
     nginx:
         image: nginx:alpine
